@@ -22,15 +22,10 @@ jobs:
     name: Validator
     runs-on: ubuntu-latest
     steps:
-    - id: setup-ruby
-      name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ env.RUBY_VERSION }}
-
-    - id: checkout
-      name: Checkout
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
 
     - id: install-gem
       name: Install gem
@@ -44,12 +39,12 @@ jobs:
 
     - id: upload-artifact
       name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: failure()
       with:
         if-no-files-found: warn
-        name: ab-results
+        name: failed-results
         path: |
-          ab-results-README.md.json
-          ab-results-README.md-filtered.json
-          ab-results-README.md-markdown-table.json
+          failed-results-README.md.json
+          failed-results-README.md-filtered.json
+          failed-results-README.md-markdown-table.json
