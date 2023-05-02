@@ -1,4 +1,5 @@
-# Awesome Infrastructure-from-Code (IfC) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Infrastructure-from-Code (IfC)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Validator](https://github.com/ehsanmok/awesome-infrastructure-from-code/actions/workflows/validator.yml/badge.svg)](https://github.com/ehsanmok/awesome-infrastructure-from-code/actions/workflows/validator.yml)
 
 A curated list of awesome Infrastructure-from-Code (IfC) frameworks and platforms.
 

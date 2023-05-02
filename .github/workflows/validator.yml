@@ -19,7 +19,6 @@ defaults:
 
 jobs:
   validator:
-    name: Validator
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,24 +26,22 @@ jobs:
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
 
-    - id: install-gem
-      name: Install gem
-      run: |
-        gem install awesome_bot
+      - name: Install gem
+        run: |
+          gem install awesome_bot
 
-    - id: validate
-      name: Validate
-      run: |
-        awesome_bot README.md --request-delay 0.5 --allow-timeout --allow-redirect
+      - name: Validate
+        run: |
+          awesome_bot README.md --request-delay 0.5 --allow-timeout --allow-redirect \
+          -w https://github.com/ehsanmok/awesome-infrastructure-from-code/actions/workflows/validator.yml
 
-    - id: upload-artifact
-      name: Upload artifact
-      uses: actions/upload-artifact@v3
-      if: failure()
-      with:
-        if-no-files-found: warn
-        name: failed-results
-        path: |
-          failed-results-README.md.json
-          failed-results-README.md-filtered.json
-          failed-results-README.md-markdown-table.json
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          if-no-files-found: warn
+          name: ab-results
+          path: |
+            ab-results-README.md.json
+            ab-results-README.md-filtered.json
+            ab-results-README.md-markdown-table.json
