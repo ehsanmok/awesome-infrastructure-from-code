@@ -25,7 +25,7 @@ A curated list of awesome Infrastructure-from-Code (IfC) frameworks and platform
 - [winglang](https://www.winglang.io/) compiles to JavaScript
 - [darklang-classic](https://docs.darklang.com/introduction)
 - [darklangGPT](https://darklang.com/) TBA
-- [AWS Chalic](https://github.com/aws/chalice) Python Serverless Microframework for AWS
+- [AWS Chalice](https://github.com/aws/chalice) Python Serverless Microframework for AWS
 
 ## Computing Stack
 
