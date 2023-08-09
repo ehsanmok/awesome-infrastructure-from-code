@@ -17,7 +17,7 @@ A curated list of awesome Infrastructure-from-Code (IfC) frameworks and platform
 
 ## General Frameworks
 
-- [nitric](https://nitric.io/) supports Python and TypeScript
+- [nitric](https://nitric.io/) supports Python, TypeScript, Go and C#
 - [shuttle](https://www.shuttle.rs/) supports Rust
 - [klotho](https://klo.dev/) supports JavaScript, Python and Go
 - [encore](https://encore.dev/) supports Go
